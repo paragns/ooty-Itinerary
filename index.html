@@ -6,37 +6,48 @@
     <title>Ooty Trip Itinerary</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Papyrus&display=swap');
-        
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Open Sans', sans-serif;
             background-image: url('https://www.transparenttextures.com/patterns/white-leather.png');
             background-color: #f5f5f5;
             margin: 0;
-            padding: 20px;
+            padding: 40px;
         }
         .container {
-            max-width: 600px;
+            max-width: 800px;
             margin: 0 auto;
             background: white;
-            padding: 20px;
+            padding: 30px;
             border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
         }
         h1 {
             text-align: center;
             font-family: 'Papyrus', sans-serif;
+            font-size: 32px;
+            color: #007BFF;
+        }
+        h2 {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 24px;
+            color: #28a745;
+        }
+        .centered {
+            text-align: center;
         }
         .collapsible {
             background-color: #28a745;
             color: white;
             cursor: pointer;
-            padding: 10px;
+            padding: 15px;
             width: 100%;
             border: none;
             text-align: left;
             outline: none;
-            font-size: 18px;
-            margin-top: 10px;
+            font-size: 20px;
+            margin-top: 15px;
         }
         .collapsible:nth-of-type(even) {
             background-color: #218838;
@@ -49,12 +60,16 @@
             display: none;
             overflow: hidden;
             background-color: #f9f9f9;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
             border-left: 5px solid #28a745;
         }
         .content ul {
             list-style-type: disc;
             padding-left: 20px;
+        }
+        .important-point {
+            font-style: italic;
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -65,16 +80,18 @@
         <button class="collapsible">Important dates and timings for travelling</button>
         <div class="content">
             <ul>
-                <li><strong>JUNE 7:</strong></li>
+                <li class="centered"><strong>JUNE 7:</strong></li>
                 <li>4:00 AM- 5:30am innovative oak garden - KSR BENGALURU [20 kms from our place]. We board our train at 5:25 so exact 4 baje nikalna hoga.</li>
                 <li>5:25 AM - 7:45 AM: Bangalore to Mysore (train).</li>
                 <li>Breakfast 1 ghante ka time milega, but we should reach the boarding point of our bus first.</li>
-                <li>9:00 AM–2:00 PM: Mysore to Ooty. Boarding point: KSRTC Sub Urban Main Bus Stand. Dropping point: Ooty Main Bus Stand.</li>
+                <li>9:00 AM–2:00 PM: Mysore to Ooty. <span class="important-point">Boarding point: KSRTC Sub Urban Main Bus Stand.</span> Dropping point: Ooty Main Bus Stand.</li>
                 <li>Stay: Yloo Retreat, Ooty. 2.5 kms from Ooty Bus Stand.</li>
-                <li><strong>JUNE 9:</strong></li>
-                <li>Journey Ooty to Bangalore: 03:00 PM - 4:00 PM. Boarding point is 2.5 kms from our stay. Boarding point: Ooty Railway Station, Near Canara Bank ATM, Landmark: Rajivgandi Circle. Dropping point: Marathalli, Bangalore. Kahi bhi utare Bangalore se toh ghar jaa hi sakte hai.</li>
+                <div class="centered">
+                    <a href="#daywise-planning">OOTY GHUMENGE</a>
+                </div>
+                <li class="centered"><strong>JUNE 9:</strong></li>
+                <li>Journey Ooty to Bangalore: 03:00 PM - 4:00 PM. Boarding point is 2.5 kms from our stay. <span class="important-point">Boarding point: Ooty Railway Station, Near Canara Bank ATM, Landmark: Rajivgandi Circle.</span> Dropping point: Marathalli, Bangalore. Kahi bhi utare Bangalore se toh ghar jaa hi sakte hai.</li>
             </ul>
-            <a href="#daywise-planning">Jump to Daywise planning for OOTY GHUMO</a>
         </div>
 
         <button class="collapsible" id="daywise-planning">Daywise planning for OOTY GHUMO</button>
