@@ -135,5 +135,27 @@
             <button class="collapsible violet">Day 3 (Sunday)</button>
             <div class="content">
                 <ul>
-                    <li><span class="underline-time">9am-10am:</span> Rose Garden / Botanical Garden</li>
-                    <li><span class="underline-time">10:30am-12:30pm:</
+                                        <li><span class="underline-time">9am-10am:</span> Rose Garden / Botanical Garden</li>
+                    <li><span class="underline-time">10:30am-12:30pm:</span> Ooty Lake</li>
+                    <li><span class="underline-time">3pm:</span> Bus</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        for (var i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.display === "block") {
+                    content.style.display = "none";
+                } else {
+                    content.style.display = "block";
+                }
+            });
+        }
+    </script>
+</body>
+</html>
