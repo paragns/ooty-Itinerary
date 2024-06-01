@@ -28,6 +28,7 @@
             font-family: 'Papyrus', sans-serif;
             font-size: 32px;
             color: #007BFF;
+            margin-bottom: 20px;
         }
         h2 {
             font-family: 'Open Sans', sans-serif;
@@ -36,6 +37,7 @@
         }
         .centered {
             text-align: center;
+            margin-bottom: 10px;
         }
         .collapsible {
             background-color: #28a745;
@@ -71,6 +73,15 @@
             font-style: italic;
             text-decoration: underline;
         }
+        .violet {
+            color: #8A2BE2;
+        }
+        .underline-time {
+            text-decoration: underline;
+        }
+        .space {
+            margin-bottom: 10px;
+        }
     </style>
 </head>
 <body>
@@ -81,31 +92,39 @@
         <div class="content">
             <ul>
                 <li class="centered"><strong>JUNE 7:</strong></li>
-                <li>4:00 AM- 5:30am innovative oak garden - KSR BENGALURU [20 kms from our place]. We board our train at 5:25 so exact 4 baje nikalna hoga.</li>
-                <li>5:25 AM - 7:45 AM: Bangalore to Mysore (train).</li>
+                <li><span class="underline-time">4:00 AM</span>- <span class="underline-time">5:30am</span> innovative oak garden - KSR BENGALURU [20 kms from our place]. We board our train at <span class="underline-time">5:25</span> so exact 4 baje nikalna hoga.</li>
+                <li><span class="underline-time">5:25 AM - 7:45 AM:</span> Bangalore to Mysore (train).</li>
                 <li>Breakfast 1 ghante ka time milega, but we should reach the boarding point of our bus first.</li>
-                <li>9:00 AM–2:00 PM: Mysore to Ooty. <span class="important-point">Boarding point: KSRTC Sub Urban Main Bus Stand.</span> Dropping point: Ooty Main Bus Stand.</li>
+                <li class="space"><span class="underline-time">9:00 AM–2:00 PM:</span> Mysore to Ooty.<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<span class="important-point">Boarding point: KSRTC Sub Urban Main Bus Stand.</span><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<span class="important-point">Dropping point: Ooty Main Bus Stand.</span>
+                </li>
                 <li>Stay: Yloo Retreat, Ooty. 2.5 kms from Ooty Bus Stand.</li>
                 <div class="centered">
+                    <span>Before</span>
                     <a href="#daywise-planning">OOTY GHUMENGE</a>
+                    <span>After</span>
                 </div>
                 <li class="centered"><strong>JUNE 9:</strong></li>
-                <li>Journey Ooty to Bangalore: 03:00 PM - 4:00 PM. Boarding point is 2.5 kms from our stay. <span class="important-point">Boarding point: Ooty Railway Station, Near Canara Bank ATM, Landmark: Rajivgandi Circle.</span> Dropping point: Marathalli, Bangalore. Kahi bhi utare Bangalore se toh ghar jaa hi sakte hai.</li>
+                <li><span class="underline-time">03:00 PM - 4:00 PM:</span> Journey Ooty to Bangalore. Boarding point is 2.5 kms from our stay.<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<span class="important-point">Boarding point: Ooty Railway Station, Near Canara Bank ATM, Landmark: Rajivgandi Circle.</span><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<span class="important-point">Dropping point: Marathalli, Bangalore.</span> Kahi bhi utare Bangalore se toh ghar jaa hi sakte hai.
+                </li>
             </ul>
         </div>
 
         <button class="collapsible" id="daywise-planning">Daywise planning for OOTY GHUMO</button>
         <div class="content">
-            <button class="collapsible">Day 1 (Friday)</button>
+            <button class="collapsible violet">Day 1 (Friday)</button>
             <div class="content">
                 <ul>
-                    <li>2pm: Reaching Ooty</li>
-                    <li>3-4pm: Lunch</li>
+                    <li><span class="underline-time">2pm:</span> Reaching Ooty</li>
+                    <li><span class="underline-time">3-4pm:</span> Lunch</li>
                     <li>(Modern Stores / Moddy's Chocolates) part of local Ooty market for shopping and chocolates</li>
                 </ul>
             </div>
 
-            <button class="collapsible">Day 2 (Saturday)</button>
+            <button class="collapsible violet">Day 2 (Saturday)</button>
             <div class="content">
                 <ul>
                     <li>Pykara Waterfalls</li>
@@ -113,30 +132,8 @@
                 </ul>
             </div>
 
-            <button class="collapsible">Day 3 (Sunday)</button>
+            <button class="collapsible violet">Day 3 (Sunday)</button>
             <div class="content">
                 <ul>
-                    <li>9am-10am: Rose Garden / Botanical Garden</li>
-                    <li>10:30am-12:30pm: Ooty Lake</li>
-                    <li>3pm: Bus</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-    <script>
-        var coll = document.getElementsByClassName("collapsible");
-        for (var i = 0; i < coll.length; i++) {
-            coll[i].addEventListener("click", function() {
-                this.classList.toggle("active");
-                var content = this.nextElementSibling;
-                if (content.style.display === "block") {
-                    content.style.display = "none";
-                } else {
-                    content.style.display = "block";
-                }
-            });
-        }
-    </script>
-</body>
-</html>
+                    <li><span class="underline-time">9am-10am:</span> Rose Garden / Botanical Garden</li>
+                    <li><span class="underline-time">10:30am-12:30pm:</
