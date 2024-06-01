@@ -3,10 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ooty Itinerary</title>
+    <title>Ooty Trip Itinerary</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Papyrus&display=swap');
+        
         body {
             font-family: Arial, sans-serif;
+            background-image: url('https://www.transparenttextures.com/patterns/white-leather.png');
             background-color: #f5f5f5;
             margin: 0;
             padding: 20px;
@@ -21,9 +24,10 @@
         }
         h1 {
             text-align: center;
+            font-family: 'Papyrus', sans-serif;
         }
         .collapsible {
-            background-color: #007BFF;
+            background-color: #28a745;
             color: white;
             cursor: pointer;
             padding: 10px;
@@ -34,8 +38,11 @@
             font-size: 18px;
             margin-top: 10px;
         }
+        .collapsible:nth-of-type(even) {
+            background-color: #218838;
+        }
         .active, .collapsible:hover {
-            background-color: #0056b3;
+            background-color: #1e7e34;
         }
         .content {
             padding: 0 18px;
@@ -43,42 +50,60 @@
             overflow: hidden;
             background-color: #f9f9f9;
             margin-bottom: 10px;
-            border-left: 5px solid #007BFF;
+            border-left: 5px solid #28a745;
+        }
+        .content ul {
+            list-style-type: disc;
+            padding-left: 20px;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Ooty Itinerary</h1>
+        <h1>Ooty Trip Itinerary</h1>
 
-        <button class="collapsible">Day 1 (Friday)</button>
+        <button class="collapsible">Important dates and timings for travelling</button>
         <div class="content">
-            <p>2pm: Reaching Ooty</p>
-            <p>3-4pm: Lunch</p>
-            <p>(Modern Stores / Moddy's Chocolates) part of local Ooty market for shopping and chocolates</p>
+            <ul>
+                <li><strong>JUNE 7:</strong></li>
+                <li>4:00 AM- 5:30am innovative oak garden - KSR BENGALURU [20 kms from our place]. We board our train at 5:25 so exact 4 baje nikalna hoga.</li>
+                <li>5:25 AM - 7:45 AM: Bangalore to Mysore (train).</li>
+                <li>Breakfast 1 ghante ka time milega, but we should reach the boarding point of our bus first.</li>
+                <li>9:00 AM–2:00 PM: Mysore to Ooty. Boarding point: KSRTC Sub Urban Main Bus Stand. Dropping point: Ooty Main Bus Stand.</li>
+                <li>Stay: Yloo Retreat, Ooty. 2.5 kms from Ooty Bus Stand.</li>
+                <li><strong>JUNE 9:</strong></li>
+                <li>Journey Ooty to Bangalore: 03:00 PM - 4:00 PM. Boarding point is 2.5 kms from our stay. Boarding point: Ooty Railway Station, Near Canara Bank ATM, Landmark: Rajivgandi Circle. Dropping point: Marathalli, Bangalore. Kahi bhi utare Bangalore se toh ghar jaa hi sakte hai.</li>
+            </ul>
+            <a href="#daywise-planning">Jump to Daywise planning for OOTY GHUMO</a>
         </div>
 
-        <button class="collapsible">Day 2 (Saturday)</button>
+        <button class="collapsible" id="daywise-planning">Daywise planning for OOTY GHUMO</button>
         <div class="content">
-            <p>Pykara Waterfalls</p>
-            <p>Doddabetta Peak</p>
-        </div>
+            <button class="collapsible">Day 1 (Friday)</button>
+            <div class="content">
+                <ul>
+                    <li>2pm: Reaching Ooty</li>
+                    <li>3-4pm: Lunch</li>
+                    <li>(Modern Stores / Moddy's Chocolates) part of local Ooty market for shopping and chocolates</li>
+                </ul>
+            </div>
 
-        <button class="collapsible">Day 3 (Sunday)</button>
-        <div class="content">
-            <p>9am-10am: Rose Garden / Botanical Garden</p>
-            <p>10:30am-12:30pm: Ooty Lake</p>
-            <p>3pm: Bus</p>
-        </div>
+            <button class="collapsible">Day 2 (Saturday)</button>
+            <div class="content">
+                <ul>
+                    <li>Pykara Waterfalls</li>
+                    <li>Doddabetta Peak</li>
+                </ul>
+            </div>
 
-        <button class="collapsible">Important Points</button>
-        <div class="content">
-            <p><strong>June 7:</strong></p>
-            <p>1. 4:00 AM- 5:30 AM: Innovative Oak Garden - KSR Bengaluru [20 kms from our place]. We board our train at 5:25 so we need to leave at 4 AM sharp.</p>
-            <p>2. 5:25 AM - 7:45 AM: Bangalore to Mysore (train).</p>
-            <p>3. We have 1 hour for breakfast, but we should reach the boarding point of our bus first.</p>
-            <p>4. 9:00 AM–2:00 PM: Mysore to Ooty. Boarding point: KSRTC Sub Urban Main Bus Stand. Dropping point: Ooty Main Bus Stand.</p>
-            <p>5. Stay: Yloo Retreat, Ooty. 2.5 kms from Ooty Bus Stand.</p>
+            <button class="collapsible">Day 3 (Sunday)</button>
+            <div class="content">
+                <ul>
+                    <li>9am-10am: Rose Garden / Botanical Garden</li>
+                    <li>10:30am-12:30pm: Ooty Lake</li>
+                    <li>3pm: Bus</li>
+                </ul>
+            </div>
         </div>
     </div>
 
