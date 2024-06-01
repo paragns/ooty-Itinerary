@@ -19,23 +19,31 @@
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        h1, h2 {
+        h1 {
             text-align: center;
         }
-        .day {
-            margin-bottom: 20px;
-        }
-        .task {
-            background: #f9f9f9;
-            margin: 10px 0;
+        .collapsible {
+            background-color: #007BFF;
+            color: white;
+            cursor: pointer;
             padding: 10px;
-            border-radius: 4px;
-            border-left: 5px solid #007BFF;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 18px;
+            margin-top: 10px;
         }
-        .important-points {
-            background: #fff3cd;
-            padding: 15px;
-            border-left: 5px solid #ffc107;
+        .active, .collapsible:hover {
+            background-color: #0056b3;
+        }
+        .content {
+            padding: 0 18px;
+            display: none;
+            overflow: hidden;
+            background-color: #f9f9f9;
+            margin-bottom: 10px;
+            border-left: 5px solid #007BFF;
         }
     </style>
 </head>
@@ -43,28 +51,28 @@
     <div class="container">
         <h1>Ooty Itinerary</h1>
 
-        <div class="day">
-            <h2>Day 1 (Friday)</h2>
-            <div class="task">2pm: Reaching Ooty</div>
-            <div class="task">3-4pm: Lunch</div>
-            <div class="task">(Modern Stores / Moddy's Chocolates) part of local Ooty market for shopping and chocolates</div>
+        <button class="collapsible">Day 1 (Friday)</button>
+        <div class="content">
+            <p>2pm: Reaching Ooty</p>
+            <p>3-4pm: Lunch</p>
+            <p>(Modern Stores / Moddy's Chocolates) part of local Ooty market for shopping and chocolates</p>
         </div>
 
-        <div class="day">
-            <h2>Day 2 (Saturday)</h2>
-            <div class="task">Pykara Waterfalls</div>
-            <div class="task">Doddabetta Peak</div>
+        <button class="collapsible">Day 2 (Saturday)</button>
+        <div class="content">
+            <p>Pykara Waterfalls</p>
+            <p>Doddabetta Peak</p>
         </div>
 
-        <div class="day">
-            <h2>Day 3 (Sunday)</h2>
-            <div class="task">9am-10am: Rose Garden / Botanical Garden</div>
-            <div class="task">10:30am-12:30pm: Ooty Lake</div>
-            <div class="task">3pm: Bus</div>
+        <button class="collapsible">Day 3 (Sunday)</button>
+        <div class="content">
+            <p>9am-10am: Rose Garden / Botanical Garden</p>
+            <p>10:30am-12:30pm: Ooty Lake</p>
+            <p>3pm: Bus</p>
         </div>
 
-        <h2>Important Points</h2>
-        <div class="important-points">
+        <button class="collapsible">Important Points</button>
+        <div class="content">
             <p><strong>June 7:</strong></p>
             <p>1. 4:00 AM- 5:30 AM: Innovative Oak Garden - KSR Bengaluru [20 kms from our place]. We board our train at 5:25 so we need to leave at 4 AM sharp.</p>
             <p>2. 5:25 AM - 7:45 AM: Bangalore to Mysore (train).</p>
@@ -73,5 +81,20 @@
             <p>5. Stay: Yloo Retreat, Ooty. 2.5 kms from Ooty Bus Stand.</p>
         </div>
     </div>
+
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        for (var i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.display === "block") {
+                    content.style.display = "none";
+                } else {
+                    content.style.display = "block";
+                }
+            });
+        }
+    </script>
 </body>
 </html>
