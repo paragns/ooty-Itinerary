@@ -23,23 +23,26 @@
             border-radius: 8px;
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
         }
-        h1 {
+        h1, h2 {
             text-align: center;
             font-family: 'Papyrus', sans-serif;
+        }
+        h1 {
             font-size: 32px;
-            color: #007BFF;
+            margin-bottom: 20px;
+            color: #007BFF; /* Blue color */
         }
         h2 {
-            font-family: 'Open Sans', sans-serif;
             font-size: 24px;
-            color: #28a745;
+            color: white; /* White color */
         }
         .centered {
             text-align: center;
+            margin-bottom: 10px;
         }
         .collapsible {
-            background-color: #e6e6fa; /* Lavender */
-            color: black;
+            background-color: #28a745;
+            color: white;
             cursor: pointer;
             padding: 15px;
             width: 100%;
@@ -49,11 +52,12 @@
             font-size: 20px;
             margin-top: 15px;
         }
-        .collapsible:nth-of-type(even) {
-            background-color: #ffffff; /* White */
+        .collapsible:nth-of-type(2n) {
+            background-color: #e6e6fa;
+            color: black;
         }
         .active, .collapsible:hover {
-            background-color: #d8bfd8; /* Thistle */
+            background-color: #1e7e34;
         }
         .content {
             padding: 0 18px;
@@ -61,7 +65,7 @@
             overflow: hidden;
             background-color: #f9f9f9;
             margin-bottom: 15px;
-            border-left: 5px solid #e6e6fa; /* Lavender */
+            border-left: 5px solid #28a745;
         }
         .content ul {
             list-style-type: disc;
@@ -78,7 +82,17 @@
             text-decoration: underline;
         }
         .space {
+            margin-bottom: 10px;
+        }
+        .ticket-item {
             margin-bottom: 20px;
+        }
+        .ticket-item h2 {
+            margin-bottom: 10px;
+            color: #333;
+        }
+        .ticket-item img {
+            max-width: 100%;
         }
     </style>
 </head>
@@ -86,61 +100,84 @@
     <div class="container">
         <h1>Ooty Trip Itinerary</h1>
 
-        <button class="collapsible"><strong>JUNE 7:</strong></button>
+        <button class="collapsible" style="background-color: #28a745;">Important dates and timings for travelling</button>
         <div class="content">
             <ul>
+                <li class="centered"><strong>JUNE 7</strong></li>
                 <li><span class="underline-time">4:00 AM</span>- <span class="underline-time">5:30am</span> innovative oak garden - KSR BENGALURU [20 kms from our place]. We board our train at <span class="underline-time">5:25</span> so exact 4 baje nikalna hoga.</li>
                 <li><span class="underline-time">5:25 AM - 7:45 AM:</span> Bangalore to Mysore (train).</li>
                 <li>Breakfast 1 ghante ka time milega, but we should reach the boarding point of our bus first.</li>
-                <li><span class="underline-time">9:00 AM–2:00 PM:</span> Mysore to Ooty.<br>
+                <li class="space"><span class="underline-time">9:00 AM–2:00 PM:</span> Mysore to Ooty.<br>
                     &nbsp;&nbsp;&nbsp;&nbsp;<span class="important-point">Boarding point: KSRTC Sub Urban Main Bus Stand.</span><br>
                     &nbsp;&nbsp;&nbsp;&nbsp;<span class="important-point">Dropping point: Ooty Main Bus Stand.</span>
                 </li>
                 <li>Stay: Yloo Retreat, Ooty. 2.5 kms from Ooty Bus Stand.</li>
-            </ul>
-        </div>
-
-        <button class="collapsible" id="daywise-planning"><strong>JUNE 9:</strong></button>
-        <div class="content">
-            <ul>
-                <li><span class="underline-time">03:00 PM - 4:00 PM:</span> Journey Ooty to Bangalore. Boarding point is 2.5 kms from our stay.<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;<span class="important-point">Boarding point: Ooty Railway Station, Near Canara Bank ATM, Landmark: Rajivgandi Circle.</span><br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;<span class="important-point">Dropping point: Marathalli, Bangalore.</span> Kahi bhi utare Bangalore se toh ghar jaa hi sakte hai.
-                </li>
-            </ul>
-        </div>
-
-        <button class="collapsible" id="daywise-planning">Daywise planning for OOTY GHUMO</button>
-        <div class="content">
-                        <button class="collapsible violet">Day 1 (Friday)</button>
-            <div class="content">
-                <ul>
-                    <li><span class="underline-time">2pm:</span> Reaching Ooty</li>
-                    <li><span class="underline-time">3-4pm:</span> Lunch</li>
-                    <li>(Modern Stores / Moddy's Chocolates) part of local Ooty market for shopping and chocolates</li>
-                </ul>
-            </div>
-
-            <button class="collapsible violet">Day 2 (Saturday)</button>
-            <div class="content">
-                <ul>
-                    <li>Pykara Waterfalls</li>
-                    <li>Doddabetta Peak</li>
-                </ul>
-            </div>
-
-            <button class="collapsible violet">Day 3 (Sunday)</button>
-            <div class="content">
-                <ul>
-                    <li><span class="underline-time">9am-10am:</span> Rose Garden / Botanical Garden</li>
-                    <li><span class="underline-time">10:30am-12:30pm:</span> Ooty Lake</li>
-                    <li><span class="underline-time">3pm:</span> Bus</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-    <script>
+                <div class="centered">
+                    <a href="#" onclick="expandDaywisePlanning()">OOTY GHUMENGE</a>
+                  </div>
+                  <li class="centered"><strong><b>JUNE 9</b></strong></li>
+                  <li><span class="underline-time">03:00 PM - 4:00 PM:</span> Journey Ooty to Bangalore. Boarding point is 2.5 kms from our stay.<br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;<span class="important-point">Boarding point: Ooty Railway Station, Near Canara Bank ATM, Landmark: Rajivgandi Circle.</span><br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;<span class="important-point">Dropping point: Marathalli, Bangalore.</span> Kahi bhi utare Bangalore se toh ghar jaa hi sakte hai.
+                  </li>
+              </ul>
+          </div>
+  
+          <button class="collapsible" style="background-color: #28a745; color: white;" id="daywise-planning">Daywise planning for OOTY GHUMO</button>
+          <div class="content" id="daywisePlanningContent" style="display: none;">
+              <button class="collapsible" style="background-color: #e6e6fa; color: black;">Day 1 (Friday)</button>
+              <div class="content">
+                  <ul>
+                      <li><span class="underline-time">2pm:</span> Reaching Ooty</li>
+                      <li><span class="underline-time">3-4pm:</span> Lunch</li>
+                      <li>(Modern Stores / Moddy's Chocolates) part of local Ooty market for shopping and chocolates</li>
+                  </ul>
+              </div>
+  
+              <button class="collapsible" style="background-color: #e6e6fa; color: black;">Day 2 (Saturday)</button>
+              <div class="content">
+                  <ul>
+                      <li>Pykara Waterfalls</li>
+                      <li>Doddabetta Peak</li>
+                  </ul>
+              </div>
+  
+              <button class="collapsible" style="background-color: #e6e6fa; color: black;">Day 3 (Sunday)</button>
+              <div class="content">
+                  <ul>
+                      <li><span class="underline-time">9am-10am:</span> Rose Garden / Botanical Garden</li>
+                      <li><span class="underline-time">10:30am-12:30pm:</span> Ooty Lake</li>
+                      <li><span class="underline-time">3pm:</span> Bus</li>
+                  </ul>
+              </div>
+          </div>
+  
+          <button class="collapsible" style="background-color: #28a745; color: white;" id="tickets">Tickets</button>
+          <div class="content" id="ticketsContent">
+              <div class="ticket-item">
+                  <h2>a] Train Ticket: Bangalore to Mysore</h2>
+                  <img src="/Users/psonkusa/Downloads/Bangalore to Mysore.png" alt="Train Ticket">
+              </div>
+              <div class="ticket-item">
+                  <h2>b] Bus Ticket: Mysore to Ooty</h2>
+                  <img src="/Users/psonkusa/Downloads/mysore_to_ooty.png" alt="Bus Ticket">
+              </div>
+              <div class="ticket-item">
+                  <h2>c] Bus Ticket: Ooty to Bangalore</h2>
+                  <img src="/Users/psonkusa/Downloads/ooty_to_bangalore.png" alt="Bus Ticket">
+              </div>
+          </div>
+      </div>
+      <script>
+        function expandDaywisePlanning() {
+            var daywisePlanning = document.getElementById("daywise-planning");
+            daywisePlanning.click();
+        }
+    
+        document.addEventListener("DOMContentLoaded", function() {
+            expandDaywisePlanning();
+        });
+    
         var coll = document.getElementsByClassName("collapsible");
         for (var i = 0; i < coll.length; i++) {
             coll[i].addEventListener("click", function() {
@@ -154,6 +191,6 @@
             });
         }
     </script>
-</body>
-</html>
-
+    </body>
+    </html>
+  
