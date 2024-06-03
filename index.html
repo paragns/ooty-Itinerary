@@ -124,7 +124,7 @@
         </div>
 
         <button class="collapsible" style="background-color: #28a745; color: white;" id="daywise-planning">Daywise planning for OOTY GHUMO</button>
-        <div class="content" id="daywisePlanningContent" style="display: none;">
+        <div class="content" id="daywisePlanningContent">
             <button class="collapsible" style="background-color: #e6e6fa; color: black;">Day 1 (Friday)</button>
             <div class="content">
                 <ul>
@@ -149,9 +149,11 @@
             <button class="collapsible" style="background-color: #e6e6fa; color: black;">Day 3 (Sunday)</button>
             <div class="content">
                 <ul>
-                    <li><span class="underline-time">9am-10am:</span> Rose Garden / Botanical Garden</li>
-                    <li><span class="underline-time">10:30am-12:30pm:</span> Ooty Lake</li>
-                    <li><span class="underline-time">3pm:</span> Bus</li>
+                    <li><span class="underline-time">9am-10:30am:</span> Ooty Lake</li>
+                    <li><span class="underline-time">11am-12pm:</span> Rose Garden / Botanical Garden</li>
+                    <li>Lunch: 12/12:30pm</li>
+                    <li>If time permits, visit a museum or any local attraction.</li>
+                    <li><span class="underline-time">3:00 PM:</span> Bus</li>
                 </ul>
             </div>
         </div>
@@ -180,7 +182,7 @@
         }
 
         document.addEventListener("DOMContentLoaded", function() {
-            expandDaywisePlanning();
+            // Removed the call to expandDaywisePlanning to ensure it's not opened by default
         });
 
         var coll = document.getElementsByClassName("collapsible");
